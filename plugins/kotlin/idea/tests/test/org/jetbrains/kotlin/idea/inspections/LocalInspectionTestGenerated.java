@@ -8347,6 +8347,11 @@ public abstract class LocalInspectionTestGenerated extends AbstractLocalInspecti
         public void testUselessElvis() throws Exception {
             runTest("testData/inspectionsLocal/redundantElvisReturnNull/uselessElvis.kt");
         }
+
+        @TestMetadata("withParenthesis.kt")
+        public void testWithParenthesis() throws Exception {
+            runTest("testData/inspectionsLocal/redundantElvisReturnNull/withParenthesis.kt");
+        }
     }
 
     @RunWith(JUnit3RunnerWithInners.class)

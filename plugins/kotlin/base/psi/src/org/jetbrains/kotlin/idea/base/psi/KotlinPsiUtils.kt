@@ -9,6 +9,7 @@ import org.jetbrains.kotlin.name.ClassId
 import org.jetbrains.kotlin.name.FqName
 import org.jetbrains.kotlin.psi.KtClassOrObject
 import org.jetbrains.kotlin.psi.KtDeclaration
+import org.jetbrains.kotlin.psi.KtExpression
 import org.jetbrains.kotlin.psi.KtPsiUtil
 
 val KtClassOrObject.classIdIfNonLocal: ClassId?
@@ -19,3 +20,5 @@ val KtClassOrObject.classIdIfNonLocal: ClassId?
         if (classesNames.any { it == null }) return null
         return ClassId(packageName, FqName(classesNames.joinToString(separator = ".")), /*local=*/false)
     }
+
+fun KtExpression.safeDeparenthesize(): KtExpression = KtPsiUtil.safeDeparenthesize(this)
