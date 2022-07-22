@@ -251,6 +251,29 @@ public abstract class K2LocalInspectionTestGenerated extends AbstractK2LocalInsp
     }
 
     @RunWith(JUnit3RunnerWithInners.class)
+    @TestMetadata("../../../idea/tests/testData/inspectionsLocal/redundantEmptyInitializerBlock")
+    public static class RedundantEmptyInitializerBlock extends AbstractK2LocalInspectionTest {
+        private void runTest(String testDataFilePath) throws Exception {
+            KotlinTestUtils.runTest(this::doTest, this, testDataFilePath);
+        }
+
+        @TestMetadata("empty.kt")
+        public void testEmpty() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/redundantEmptyInitializerBlock/empty.kt");
+        }
+
+        @TestMetadata("hasComment.kt")
+        public void testHasComment() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/redundantEmptyInitializerBlock/hasComment.kt");
+        }
+
+        @TestMetadata("notEmpty.kt")
+        public void testNotEmpty() throws Exception {
+            runTest("../../../idea/tests/testData/inspectionsLocal/redundantEmptyInitializerBlock/notEmpty.kt");
+        }
+    }
+
+    @RunWith(JUnit3RunnerWithInners.class)
     @TestMetadata("testData/inspectionsLocal")
     public abstract static class InspectionsLocal extends AbstractK2LocalInspectionTest {
         @RunWith(JUnit3RunnerWithInners.class)
