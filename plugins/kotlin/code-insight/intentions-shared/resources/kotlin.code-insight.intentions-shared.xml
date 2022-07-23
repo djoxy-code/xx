@@ -24,5 +24,11 @@
       <categoryKey>group.names.kotlin</categoryKey>
     </intentionAction>
 
+    <intentionAction>
+      <className>org.jetbrains.kotlin.idea.codeInsight.intentions.shared.RemoveEmptySecondaryConstructorBodyIntention</className>
+      <bundleName>messages.KotlinBundle</bundleName>
+      <categoryKey>group.names.kotlin</categoryKey>
+    </intentionAction>
+
   </extensions>
 </idea-plugin>
