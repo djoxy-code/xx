@@ -21,6 +21,7 @@ internal fun MutableTWorkspace.generateK2IntentionTests() {
             model("${idea}intentions/importMember", pattern = pattern)
             model("${idea}intentions/convertToBlockBody", pattern = pattern)
             model("${idea}intentions/addWhenRemainingBranches", pattern = pattern)
+            model("${idea}intentions/removeSingleExpressionStringTemplate", pattern = pattern)
             model("code-insight/intentions-k2/tests/testData/intentions", pattern = pattern)
         }
     }
